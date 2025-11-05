@@ -32,6 +32,6 @@ bloomberg-commodities-de/
 ├── dashboard.py           # ← Interactive chart
 └── README.md
 
-Dashboard Snapshots:
+## Dashboard Snapshots:
 <img width="856" height="670" alt="Screenshot 2025-11-05 at 3 26 23 PM" src="https://github.com/user-attachments/assets/3fb9c60c-5217-4149-9f50-29e397c9f117" />
 <img width="811" height="695" alt="Screenshot 2025-11-05 at 3 26 01 PM" src="https://github.com/user-attachments/assets/2a52eeac-4e53-422f-a14a-425b24d5f4b4" />
