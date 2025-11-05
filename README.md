@@ -42,10 +42,10 @@ bloomberg-commodities-de/
 ##Run Instructions:
 ```bash
 # 1. Install (once)
-pip install polars streamlit
+pip3 install polars streamlit
 
 # 2. Run ETL
-python pipeline.py
+python3 pipeline.py
 
 # 3. Launch dashboard
 streamlit run dashboard.py
