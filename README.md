@@ -47,8 +47,48 @@ pip3 install polars streamlit
 # 2. Run ETL
 python3 pipeline.py
 
+# Bloomberg Commodities ETL – Day 1 Ready (ML + Anomaly Detection)
+
+Built for Bloomberg interview prep: From Kaggle mocked CSVs to production-grade pipeline in <2 hours.  
+**Now with Data Quality (DQ) guards + Z-Score anomaly detection** — catches negative prices and 3σ outliers instantly.
+
+## 🚀 What's New in Day 1
+- **DQ Check**: Auto-removes invalid prices ≤ 0 (critical for finance).
+- **Anomaly Detection**: Log-transform + Z-Score (3σ rule) on prices — industry standard for commodity volatility.
+- **Robustness**: Column-name agnostic (works with "Price", "Close", etc.).
+- **Zero Extra Deps**: Pure Polars + NumPy/SciPy — no Great Expectations bloat.
+
+**Sample Output**:
+
 # 3. Launch dashboard
 streamlit run dashboard.py
+
+
+## 🎯 Goal
+Scalable ETL for commodity data:
+- Ingests messy CSVs (commas, % signs, mixed formats).
+- Cleans, combines, and validates.
+- Flags anomalies for trading desk alerts.
+- Ready for Prefect orchestration (Day 2).
+
+## 🛠 Tech Stack
+| Tool | Purpose |
+|------|---------|
+| **Polars** | Lightning-fast data processing (10x Pandas). |
+| **NumPy/SciPy** | Z-Score stats (log-normal for prices). |
+| **Pandas** (minimal) | Temp conversions only. |
+| **CSV Output** | Portable + human-readable (Parquet ready for prod). |
+
+## 📁 Folder Structure
+bloomberg-commodities-de/
+├── data/
+│   ├── raw/              # Drop your 6 Kaggle CSVs here (e.g., crude_oil.csv)
+│   ├── combined_commodities.csv     # Raw combined output
+│   └── combined_commodities_clean.csv  # DQ + anomaly-flagged
+├── pipeline.py           # Full ETL + Day 1 upgrades
+├── dashboard.py          # Interactive Streamlit viz (launch with streamlit run dashboard.py)
+└── README.md
+
 
 
 
