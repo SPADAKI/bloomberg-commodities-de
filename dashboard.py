@@ -5,7 +5,8 @@ import polars as pl
 st.title("Bloomberg Commodities – Fixed & Simple")
 
 try:
-    df = pl.read_csv("data/combined_commodities.csv")
+    # df = pl.read_csv("data/combined_commodities.csv")
+    df = pl.read_csv("data/combined_commodities_clean.csv")
     st.success(f"Loaded {len(df)} rows")
 
     # Select metric to plot (only numeric fields)
