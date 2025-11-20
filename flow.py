@@ -21,4 +21,4 @@ def commodities_flow():
 
 if __name__ == "__main__":
     commodities_flow()   # Run once now
-    # → For scheduling later: prefect deploy + agent (we’ll do in Loom)
+    # → For scheduling later: prefect deploy + agent
