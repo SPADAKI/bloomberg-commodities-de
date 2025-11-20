@@ -87,6 +87,13 @@ bloomberg-commodities-de/
 │   └── combined_commodities_clean.csv  # DQ + anomaly-flagged
 ├── pipeline.py           # Full ETL + Day 1 upgrades
 ├── dashboard.py          # Interactive Streamlit viz (launch with streamlit run dashboard.py)
+
+Key Points :
+- B-Pipe → Kafka: exactly-once, 100k+ msgs/sec
+- Prefect: retries, observability, scheduling (cron="@daily")
+- Polars: 10–50x faster than Pandas on commodity ticks
+- Z-Score anomalies → alert trading desk instantly
+- Final storage: columnar Parquet for BI tools (Tableau, etc.)
 └── README.md
 
 
