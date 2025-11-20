@@ -87,6 +87,7 @@ bloomberg-commodities-de/
 │   └── combined_commodities_clean.csv  # DQ + anomaly-flagged
 ├── pipeline.py           # Full ETL + Day 1 upgrades
 ├── dashboard.py          # Interactive Streamlit viz (launch with streamlit run dashboard.py)
+├── flow.py               # Prefect for logs,retries and visuals for Orchestration
 
 Key Points :
 - B-Pipe → Kafka: exactly-once, 100k+ msgs/sec
